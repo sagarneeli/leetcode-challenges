@@ -4,9 +4,7 @@ class Solution:
         cur_sum = 0
         
         for num in nums:
-            if cur_sum < 0:
-                cur_sum = 0
-                
+            cur_sum = max(cur_sum, 0)
             cur_sum += num
             max_sum = max(max_sum, cur_sum)
             
