@@ -1,6 +1,6 @@
 We can use Kadane's algorithm to find the maximum subarray sum.
 ​
-The constraint being, we want the subarray to always be largest hence whenever we encounter a negative sum we reset to zero
+Kadane's algorithm runs one for loop over the array and at the beginning of each iteration, if the current sum is negative, it will reset the current sum to zero. This way, we ensure a one-pass and solve the problem in linear time.
 ​
 Time Complexity
 Since we do a one pass over the entire array - O(N), where N being the number of elements in the array
