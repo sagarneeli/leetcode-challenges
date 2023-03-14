@@ -13,6 +13,7 @@ class Solution:
             cur_sum = cur_sum * 10 + node.val
             if not node.left and not node.right:
                 result.append(cur_sum)
+                return
                 
             dfs(node.left, cur_sum)
             dfs(node.right, cur_sum)
