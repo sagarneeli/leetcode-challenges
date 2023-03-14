@@ -17,7 +17,6 @@ class Solution:
             dfs(node.left, cur_sum)
             dfs(node.right, cur_sum)
             cur_sum = cur_sum * 10 - node.val
-            
             return
         
         result = []
