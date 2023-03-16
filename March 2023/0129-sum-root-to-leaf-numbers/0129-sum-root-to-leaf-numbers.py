@@ -9,22 +9,17 @@ class Solution:
     def sumNumbers(self, root: Optional[TreeNode]) -> int:
         def dfs(node, cur_sum):
             if not node:
-                return
+                return 0
             
             cur_sum = cur_sum * 10 + node.val
             if not node.left and not node.right:
-                result.append(cur_sum)
-                return
+                return cur_sum
                 
-            dfs(node.left, cur_sum)
-            dfs(node.right, cur_sum)
-            cur_sum = cur_sum * 10 - node.val
-            return
+            left = dfs(node.left, cur_sum)
+            right = dfs(node.right, cur_sum)
+            return left + right
         
-        result = []
-        dfs(root, 0)
-        
-        return sum(result)
+        return dfs(root, 0)
             
             
             
