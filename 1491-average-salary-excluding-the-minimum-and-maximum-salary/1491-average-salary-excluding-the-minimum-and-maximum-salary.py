@@ -1,6 +1,4 @@
 class Solution:
     def average(self, salary: List[int]) -> float:
-        salary.remove(min(salary))
-        salary.remove(max(salary))
-        return sum(salary) / len(salary)
+        return (sum(salary) - max(salary) - min(salary)) / (len(salary) - 2)
         
