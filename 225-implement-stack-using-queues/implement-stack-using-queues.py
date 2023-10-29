@@ -8,8 +8,8 @@ class MyStack:
 
     def pop(self) -> int:
         for _ in range(len(self.queue) - 1):
-            self.queue.append(self.queue.pop())
-        return self.queue.pop()
+            self.queue.append(self.queue.popleft())
+        return self.queue.popleft()
 
     def top(self) -> int:
         return self.queue[-1]
